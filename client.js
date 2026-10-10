@@ -23,4 +23,8 @@ socket.on("hello", (data) => {
 socket.on("data",(data)=>{
   const response = data.sum;
   console.log("Data received:", response);
+});
+
+socket.on("data2",(data)=>{
+  console.log("Data2 received:", data.id);
 })

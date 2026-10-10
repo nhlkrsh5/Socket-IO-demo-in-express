@@ -14,7 +14,8 @@ app.get("/:id",async(req,res)=>{
     
   const data =  await DemoFunction(10,20);
     const id = req.params.id;
-    io.emit("data",{success: true,data: id,sum: data,message: "success"});
+    //io.emit("data",{success: true,sum: data,message: "success"});
+    io.emit("data2",{success: true,id: id,message: "success"});
     res.json({
     message: "Working"
     });
